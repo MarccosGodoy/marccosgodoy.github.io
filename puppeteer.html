@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puppeteer</title>
+</head>
+<body>
+    <h1>Puppeteer</h1>
+    <p>
+        1- npm i puppeteer <br>
+        2- Basic code <br> <br>
+
+        const testing = async ()=> {
+            const browser = await puppeteer.launch({headless:false}); 
+            const page = await browser.newPage(); 
+            await page.goto('https://google.com'); 
+            await page.waitForSelector('*[name="q"]'); 
+            await page.type('*[name="q"]', "hola"); 
+            await browser.close();
+        } <br> <br>
+
+        web: https://pptr.dev/ <br> <br>
+
+        browser = const browser = await puppeteer.launch(); <br>
+        browserVisible = const browser = await puppeteer.launch({headless:false}); <br>
+        browserWindowSizeReset = await puppeteer.launch({defaultViewport: null}); <br>
+        newWindow = const page = await browser.newPage(); <br>
+        browserClose = await browser.close(); <br>
+        abrir web = await page.goto('https://google.com') <br>
+        click = await page.click('css selector') <br>
+        escribir = await page.type('css selector', "hola"); <br>
+        esperarCargaElemento = await page.waitForSelector('css selector'); <br>
+        screenshot = await page.screenshot({ path: 'nombre.png' }); <br>
+        obtener titulo = await page.title() <br>
+        obtener url = await page.url() <br>
+        evaluar =  await page.evaluate(()=>{codigo nativo JS}) <br>
+        sleep = await page.waitFor(milisegundos) <br>
+        delay = await page.loQueSea(funcion, {delay: 1000}) <br>
+        pressKey = await page.keyboard.press(String.fromCharCode(keycode)) <br>
+        containsText = await page.$x("//*[contains(text(), "texto")]") <br>
+        scrolldown = scrollDown(selector, page) <br>
+
+    </p>
+</body>
+</html>
