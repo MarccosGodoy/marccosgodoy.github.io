@@ -12,13 +12,13 @@
         1- npm i puppeteer <br>
         2- Basic code <br> <br>
 
-        const testing = async ()=> {
-            const browser = await puppeteer.launch({headless:false}); 
-            const page = await browser.newPage(); 
-            await page.goto('https://google.com'); 
-            await page.waitForSelector('*[name="q"]'); 
-            await page.type('*[name="q"]', "hola"); 
-            await browser.close();
+        const testing = async ()=> { <br>
+            const browser = await puppeteer.launch({headless:false});  <br>
+            const page = await browser.newPage();  <br>
+            await page.goto('https://google.com');  <br>
+            await page.waitForSelector('*[name="q"]');  <br>
+            await page.type('*[name="q"]', "hola");  <br>
+            await browser.close(); <br>
         } <br> <br>
 
         web: https://pptr.dev/ <br> <br>

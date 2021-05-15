@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>HTML</h1>
+
+
+    <p>
+        https://www.w3schools.com/html/html_basic.asp
+
+<!-- Docs -->
+
+<!-- Los archivos html se los llama "index.html" por que por lo general se prioriza en la busqueda los archivos llamados index -->
+
+<!-- Todos los archivos html empiezan con un  "<!DOCTYPE html>" que se utiliza para que el navegador comprenda que esta traatando con un archivo html -->
+
+<!-- 
+    
+    Toda pagina web se desarrolla dentro de dos tags !<html><html> que es donde se va a escribir el cogido.
+    
+    Dentro de este tag html se encuentran dos elementos más, el tag "head" y el tag "body"
+    - head: En el head van todas las configuraciones y especificaciones que el navegador tiene que tener en cuenta al trabajar con este archivo.
+    Todo lo que se encuentre dentro del head, no se va a ver dentro del navegador.
+    -body: Dentro del body va todo el contenido de nuestra pagina web
+    en html hay dos tipos de cajas
+    display: block. La cual completa todo el ancho del navegador
+    display: inline - La cual completa unicamente el tamaño del contenido que tenga adentro
+-->
+
+
+<!-- 
+    tags disponibles: 
+    <header></header>: Es donde se pone lo principal que aparece en la pagina
+    <footer></footer<: Es donde se pone el final de la pagina, suele ir terminos y condiciones, numeros de contacto o declaraciones de copyright
+    <h1></h1>: Se utiliza para poner titulos. Es importante para el posicionamiento de google. Se recomienda un uso unico para no afectar al SEO. Es el Titulo más grande de todos los "h"
+    <h2></h2>: Se utiliza para subtitulos, se puede utilizar varias veces, sin exagerar
+    <h3></h3>: Se utiliza para subtitulos, se puede utilizar varias veces, sin exagerar
+    <h4></h4>: Se puede utilizar una ilimitada cantidad de veces 
+        
+    <h5></h5>: Se puede utilizar una ilimitada cantidad de veces
+    <h6></h6>: Se puede utilizar una ilimitada cantidad de veces
+    <p></p>: El tag "P" es un parrafo, es donde podemos poner un texto largo
+    
+    <b></b>: Establece el texto como Bold
+    <i></i>: Establece el texto en Italic
+    <strike></strike>: Tacha el texto con una linea intermedia
+    <hr>: Crea una raya que ocupa todo el espacio (util para hacer un break)
+    Links:
+    <a href=""></a>: Genera links, siempre dentro de esta etiqueta va a haber un atributo "href" donde se va a pasar hacia donde queremos que redirija el link. Puede ser a una url o puede ser un archivo local
+    Ejemplo 1: Abrir Url
+    <a href="https://google.com">google</a>
+    En este ejemplo pasamos la url de google y nos va a generar un link acortado con el nombre "google"
+    Ejemplo 2: Abrir Archivo Local
+    <a href="pagina2,html">Pagina 2</a>:
+    En este ejemplo pasariamos un archivo local llamado pagina2 el cual tendria que estar en la misma carpeta en la cual se encuentra nuestro archivo principal.
+    Ejemplo 3: Abrir archivo local dentro de carpeta
+    <a href="Paginas/pagina2,html">Pagina 2</a>
+    Si tuvieramos una carpeta contenedora de paginas, para pasarle el path es tan simple como poner el nombre de la carpeta (Paginas en este caso) seguido del nombre del archivo.
+    
+    Ejemplo 4: Abrir archivo local por fuera de una carpeta
+    <a href="../pagina2,html">Pagina 2</a>
+    Si quisieramos acceder a una pagina que esta en una carpeta anterior a la cual nos encontramos, escribiendo "../" estariamos haciendo que busque el archivo en la carpeta anterior
+    Ejemplo 5:  Abrir pestaña nueva
+    <a href="https://google.com" target="BLANK">Google</a>
+    Si quisieramos abrir nuestro link en una nueva pestaña se agrega el atributo "target='BLANK'"
+    <br>: Sirve para dejar un espacio o para completar lo que queda del ancho del navegador
+    Listas: 
+    <ul></ul>: Unorder List. Separa los items sin un orden especifico.
+    <ol></ol>: Order List. Ordena los items agregados numericamente de menor a mayor
+    <li></li>: ListItem. Se utiliza dentro de cualquier lista para definir los items que las componen
+    Imagenes y Video:
+    <img src="imagen.jgp">: Dentro del src va el path de la imagen que queremos colocar. Se pueden agregar tanto url como archivos locales.
+    atributos img:
+        alt="titulo de imagen": Establece un titulo para la imagen, es importante para el SEO y de no aparecer por algun motivo la imagen ya sea por que dejo de existir o algo así, pasaria a aparecer el texto ingresado
+        
+    <video src="video.mp4" controls></video>: A diferencia de en imagen se agrega un atributo "controls" para poder reproducir el video, subir el volumen, bajarlo, etc. De no poner ese atributo no habria manera de iniciar el video ni de frenarlo.
+    <audio src="audio.mp3" controls></audio>: Al igual que el video el audio requiere el controls para poder ser utilizado.
+    
+    
+    audio-atributos: 
+    - autoplay: es par que se reproduza automáticamente
+    - loop: es para que se repita constantemente
+    audio alternativa:
+    <audio controls>
+        <source src="audio.mp3">
+        <source src="audio.mp3">
+    </audio >
+    Contenedores:
+    <div></div>: Es un contenedor que se utiliza para separar y dividir contenido.
+    <nav></nav>: el Nav normalmente va dentro del <header> se utiliza para establecer una barra de navegacion, es un divisor al igual que el div pero es util su nombre para diferenciarla.
+    <main></main>: Es otro contenedor, el cual se utiliza para descongestionar el uso de los divs, dentro de este por lo general va el contenido principal de la pagina
+    <article></article>: Otro contenedor para evitar el abuso de los divs y aportar a la lectura de la pag web
+    <section></section>: otro contenedor más. el cual suele ir dentro del main para separar los articulos que se creen
+    <aside></aside>: El aside es otro contenedor simil al div, el cual se utiliza para los costados, un buen ejemplo serian los videos recomendados de youtube.
+    <form></form>: De esta manera se crean formularios
+    method="GET" method="¨POST"
+    When you use GET, the form data will be visible in the page address.
+    
+    Use POST if the form is updating data, or includes sensitive information (passwords).
+    POST offers better security because the submitted data is not visible in the page address.
+    <input>: Ingreso de datos del usuario
+    input-atributos:
+    -type: dentro de type se establece que tipo de input va a ser, texto, checkbox, password, etc.
+        *types: 
+            -text: Recibe texto
+            .password: Transforma los datos recibidos en circulos que sensuran lo que se escribe
+            -number: Acepta solo numeros
+            -email: Solo acepta datos con mails
+            -checkbox
+            -radio: Funciona igual que la checkbox pero es redondo y solo permite seleccionar una opcion
+            -color: Es un selector de color
+            -url: acepta solo urls
+            -tel: acepta numeros de telefono
+            -range: Genera una barra deslizable
+                atributos soporte: 
+                    min="" - Se establece el rango minimo que va a generar
+                    max="" - Se establece el rango maximo
+            -date: Receptor de fecha
+            -time: Receptor de horarios
+            -button: Un botton que sirve para pasar los datos ingresados
+                atributos soporte:
+                    value="" - Todavia no sé bien si lo ingresado en value es lo que retorna o es el nombre del boton
+            -submit: Funciona para enviarl os datos ingresados
+            -search: crea una search box
+            -file: de esta manera podemos ingresar archivos
+    -required: Es para establecer que si o si se tiene que ingresar ese dato para poder continuar 
+    
+    <table></table>: Se crean tablas similares a las de excel. Hay dos maneras de ingresar datos a una tabla. Con los tags "tr" y "td"
+    
+    
+    <tr></tr>: Table Row: se utiliza para establecer una nueva row dentro de la tabla (podemos agregar las que queramos) 
+    <td></td> Table Data: Es la informacion que va a haber dentro de las rows, se utiliza dentro del tag "tr"
+    <thead> Son titulos de las tablas. van dentro de un "tr"
+        <th></th>: van dentro de "thead" para declarar los dichos titulos
+    <tbody> se utiliza para establecer el contenido de la table, es un contenedor para los tr y td
+    <select></select>: Crea un multiple choise entre varias opciones las cuales se declaran con el tag "option"
+    <option></option>: Se utiliza para declarar opciones dentro de un select
+    
+    <label></label>
+     <progress> : Es una barra de progreso (como lo seria una barra de descarga por ejemplo o de cargado)
+    Se tiene que agregar un minimo y un maximo. (min="" max="")
+    Progress Element Attributes
+    Value: Specifies how much of the task has been completed.
+    Max: Specifies how much work the task requires in total. 
+    draggable="true": Permite poder agarrar un objeto y ponerlo en un lugar diferente. Todos los elementos pueden ser "draggable"
+    placeholder="": Se utiliza para tener un texto en algun input el cual apenas el usuario ingrese algo va a desaparecer, por ejemplo donde tiene que poner la contraseña podriamos poner placeholder="password" para indicarle al usuario que tendria que ingresar la contraseña ahí
+    requierd(atributo): Es para establecer que sin ese input no se debe avanzar, es decir que es importante,como por ejemplo el ingreso de una contraseña o algun dato especifico que sea requerido.
+    <script src="main.js"></script>: de esta manera se conecta javascript con html
+ -->
+
+
+
+
+
+
+
+
+<!-- 
+    Head Contenido:
+    Metadato:
+    Los metadato van dentro del "head". Son configuraciones o informacion que se le entrega al navegador
+    <meta>: Se utliza este tag para declararlo
+    meta-atributos:
+    - charset="utf-8": Se utiliza para agregar soporte a más caracteres
+    - name="keywprds": Son palabras claves de la pagina web
+        sub-atributo: content="": Una vez declarado el keywords, dentro del content se ingresan las palabras clave de la pagina. Son utiles para el SEO
+    -name="description":: Es la descripcion que aparece sobre la pagina en el navegador
+        sub-atributo: content="" Una vez declarado el "description" se ingresa la descripcion dentro del content. Lo ideal es entre 70 y 200 caracteres
+    
+    -name="author": Se utiliza para darle creditos al creador de la pagina
+        sub-atributo: content="" se ingresa el nombre del autor dentro del content
+    
+    -name="copytight": Se utiliza para establecer los derechos de autor si es que la pagina los tiene
+        sub-atributo: content="" se ingresa el texto informativo
+    -name="robots": Se utiliza para establecer si la pagina esta indexada o no. Indexada es para que aparezca en el navegador si alguien pone alguna de nuestras palabras clave y noindexada es para que a pesar que busquen nuestras palabras clave, no se muestre en el navegador. Se puede utilizar para tener paginas ocultas que no queremos que google muestre.
+        sub-atributo:
+            content="index" para declarar que esta indexada
+            content="noindex" para declarar que no esta indexada 
+    
+    -name="viewport": Se utiliza para que la pagina web sea responsive, es decir que este preparada para ser vista en multiples dispositivos
+        sub-atributo:content="width=device-width, initial-scale=1.0"
+    
+    Establecer icono en pestaña:
+    <link rel="icon" href="ruta o url del icon/importante, tiene que ser .ico)">  
+    Conectar CSS con HTML:
+    
+    <link rel="stylesheet" href="style.css">
+    Para conectar el archivo de CSS con el de HTML hacemos uso del tag "link" y pasamos en el "rel" el tipo de archivo que va a estar recibiendo, seguido de un href en el cual se declara el nombre del archivo que se va a estar conectando, incluyendo el path neceesario
+    
+    <time></time>: Es para ingresar fechas
+-->
+
+
+
+
+<!--
+    
+    Content Models
+    
+    Metadata: Content that sets up the presentation or behavior of the rest of the content. These elements are found in the head of the document.
+    Elements: <base>, <link>, <meta>, <noscript>, <script>, <style>, <title> 
+        
+    Embedded: Content that imports other resources into the document.
+    Elements: <audio>, <video>, <canvas>, <iframe>, <img>, <math>, <object>, <svg> 
+    Interactive: Content specifically intended for user interaction.
+    Elements: <a>, <audio>, <video>, <button>, <details>, <embed>, <iframe>, <img>, <input>, <label>, <object>, <select>, <textarea> 
+    Heading: Defines a section header.
+    Elements: <h1>, <h2>, <h3>, <h4>, <h5>, <h6>, <hgroup> 
+    Phrasing: This model has a number of inline level elements in common with HTML4.
+    Elements: <img>, <span>, <strong>, <label>, <br />, <small>, <sub>, and more. 
+    Flow content: Contains the majority of HTML5 elements that would be included in the normal flow of the document.
+    Sectioning content: Defines the scope of headings, content, navigation, and footers.
+    Elements: <article>, <aside>, <nav>, <section> 
+-->
+
+
+
+
+<!--
+    Generic Structure:
+    <header>
+    <nav>
+    <main>
+    <section>
+    <article>
+    <Aside>
+    <footer>
+-->
+
+
+<!-- 
+    HTML5 web storage, websites can store data on a user's local computer.
+    Before HTML5, we had to use JavaScript cookies to achieve this functionality.
+    The Advantages of Web Storage
+    - More secure
+    - Faster
+    - Stores a larger amount of data
+    - Stored data is not sent with every server request 
+    There are two types of web storage objects:
+    - sessionStorage()
+    - localStorage()
+    Local vs. Session
+    - Session Storage is destroyed once the user closes the browser
+    - Local Storage stores data with no expiration date 
+-->
+
+
+<!-- 
+    autocompletado:
+    podemos crear elementos con una clase establecida de una manera bastante rapida. Escribimos el nombre del elemento seguido de un punto y el nombre de la clase
+    Ejemplo:
+    section.nombre-clase
+    <section class="nombre-clase"></section>
+    podemos crear multiples elementos de la siguiente manera:
+    a[href="#"]{Inicio}*5
+    
+    que nos devolveria lo siguiente:
+    <a href="#">Inicio</a>
+    <a href="#">Inicio</a>
+    <a href="#">Inicio</a>
+    <a href="#">Inicio</a>
+    <a href="#">Inicio</a>
+ -->
+    </p>
+</body>
+</html>

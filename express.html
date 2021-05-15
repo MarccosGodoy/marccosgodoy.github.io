@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Express</title>
+</head>
+<body>
+    <h1>Express</h1>
+    <p>
+        1- npm init -y <br>
+        2- npm i express <br> 
+        3- npm install cors <br>
+        3- Simple base: <br>
+
+        const express = require('express') <br>
+        const app = express() <br> 
+        const cors = require('cors') <br>
+        const port = process.env.PORT || 5000 <br> <br>
+
+        app.use(express.json()) <br>
+        app.use(cors())  <br>
+
+        app.get('/', (req, res) => { <br>
+            res.send('Hello World!') <br>
+        }) <br> <br> <br>
+        
+ 
+        app.listen(port, () => { <br>
+            console.log(`Test app listening at http://localhost:${port}`) <br>
+        }) <br> <br>
+        
+        app.get('/:parametro/:parametro2', (req, res) => { <br>
+            const nombre = req.params <br>
+            res.send('Hello World!') <br>
+        }) <br> <br>
+
+        exportar modulos: module.exports.nombre = nombre <br>
+        importar modulos: const nombre = require('./archivo') <br>
+    </p>
+</body>
+</html>

@@ -1,0 +1,14 @@
+Primitivos: Se accede directamente al valor
+- string
+- number
+- boolean
+- null
+- undefined
+- NaN
+
+Compuestos: Se accede a la referencia del valor
+- object = {}
+- array = []
+- function (){}
+- Class {}
+

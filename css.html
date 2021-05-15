@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>css</h1>
+    <p>
+        /*
+Selectores:
+Selector{
+    propiedad: valor;
+}
+Universal: Selecciona todos los elementos dentro del html.
+    uso:
+        *{
+        color: red;}
+    Explicacion: se pone el "*" para llamar a todos los elementos del archivo html, en este caso todos se pondrian de color rojo.
+Type: Seleccionamos el tipo de elemento (h1,div,nav,h2, article, etc)
+    uso:
+    h1{
+    color: red;}
+    Explicacion: Llamamos el h1 y todos los elementos de este tipo se van a ver afectados y el texto se va a convertir en rojo
+Class:  Selecciona los elementos que tengan una clase pre definida por nosotros y los modifica
+    uso:
+        html: Se pone la class dentro del elemento.
+            <h1 class="h1-style">Titulo</h1>
+        CSS: Siempre se utiliza un punto seguido del nombre de la clase que queremos modificar
+            .h1-style{
+                color: red;
+            }
+ID: Selecciona el elemento por ID, el cual es un nombre único que se le adjudica a algun elemento.
+    uso:
+        html: Se pone el id dentro del elemento
+            <h1 id="h1-style">Titulo</h1>
+        CSS: Se pone el hashtag seguido del nombre del id
+            #h1-style{
+                color:red; 
+            }
+Atributo: Se puede crear un atributo customizado con el nombre que queramos o utilizar uno ya creado.
+    uso:
+        html:
+            <h1 rancio="see"></h1
+        CSS: Se pone entre corchetes el atributo creado
+            [rancio="see"]{
+                color:red;
+            }
+            
+Descendiente: Se utiliza para modificar los hijos de algun elemento. 
+        uso:
+            html: El h1 seria el hijo, por ende "decenciendte" del div
+                <div>
+                    <h1>Titulo</h1>
+                </div>
+            CSS: Ponemos primero al padre (div) y despues al hijo (h1)
+                div h1{
+                    color:red;
+                }
+Pseudo-Clases: En un evento se genera una seleccion de un elemento especifico. Pör ejemplo,  al pasar el mouse por encima el elemento seleccionado se modificaria.
+    uso:
+        CSS: Seleccionamos el elemento y agregamos la pseudo clase, logrando asi que cada vez que pasemos el mouse por encima de un h1 se cambie a color rojo
+            h1:hover{
+                color: red;
+            }
+*/
+
+/*
+Especificidad: 
+Es la prioridad que le da CSS a cada item a la hora de modificarlo, hay distintas maneras de especificar cuan importantes son los elementos: 
+Orden de importancia: 
+!important: al declarar algo como important no importa cuando se lo quiera modificar siempre va atomar el valor de important
+estilos en linea: establecer el estilo dentro de CSS
+id: 
+class: 
+pseudo clases: 
+atributos: 
+elements: 
+pseudo-elements: 
+*/
+
+/* 
+Medidas: 
+Relativas: Se utilizan para cuando queremos que un diseño se adapte a distintos tipos de dispositivos (más bien pensando en moviles)
+Ejemplo: 
+h1{
+    font-size: 10px; 
+}
+h1{
+    font-size: 5em; # "em" equivale a 16 pixeles por default, pero si previamente modificamos el tamaño del elemento que va a afectar toma el valor del elemento modificado, en este caso 1 em equivale a 10px
+}
+*/
+/* 
+padding:
+margin: 
+*/
+
+/*
+Averiguar sobre el "normalize.css"
+Basicamente es un archivo que se puede descargar, el cual "resetea" todo el contenido del css, para que nosotros podamos modificarlo a nuestro gusto
+*/
+
+/*
+Box types:
+Hay dos tipos de Box
+Block = Oculpan todo el ancho disponible en la pagina
+Inline = Ocupa pura y exclusivamente el espacio del contenido que tenga el elemento
+para poder cambiar el comportamiento de las cajas usamos el "display"
+Los elementos Block y Inline tienen propiedades.
+Inline:
+    no se lesp uede dar height
+    admite width
+Block: 
+    Si admite height
+    no admite width
+display: inline; (Para convertir un block en inline)
+display: block; (Para convertir un inline en block
+display: inline-block (De esta manera podemos hacer que se comporte como un elemento en linea pero que pueda adquirir las propiedades de un elemento en bloque)
+display: table (Se utiliza para que se comporte como una tabla)
+dusokay; grid
+display:flex (se utiliza para poner dos contenedores a la par)
+display: inline-flex
+display: inline-grid
+display: none (Es util cuando necesitamos que algo desaparezca de la pantalla, es bastante util para el responsive design. Básicamente lo que hace es quitar el elemento al cual le pongamos este atributo)
+*/
+/* 
+Box Model:
+El box model esta compuesto por, Content -  Padding - Border - Margin los cuales estan en orden jerarquico
+*/
+/*
+box-shadow: {x} {y} {desenfoque} {border} {color}
+*/
+/* 
+Position: Otorga propiedades para que podamos modificar la ubicacion del eleemento seleccionado, afectando el flujo del html.
+Las propiedades que adquiere el elemento son {top} {left} {right} {bottom} y {z-index}
+Si estan declarados {top} y {left} los va a tomar como prioridad ignorando el {right} {bottom}
+z-index: mientras más alto el numero más "adelante"  va a estar. Se recomienda poner de 100 en 100 para un mejor manejo
+Static: Es el valor por defecto, el cual hace de cuenta como que no esta posicionado el elemento
+Relative:
+En relative, al modificcar la posicion, si bien cambia la posicion del elemento, reserva el espacio que tenia adjudicado.
+Absolute: No reserva el espacio adquirido del elemento. Va a tener como punto de referencia el viewport o el elemento que lo contenga si es que esta posicionado
+Fixed: Como dice su palabra queda fijo en algun lugar. Se suele utilizar para los navs o publicidad para que o nunca se pierda la barra de navegacion o para que se vea siempre la publicidad. No guarda el espacio asignado
+Sitcky: Funciona igual que el fixed, pero e diferencia del fixed, guarda el espacio asignado al elemento.
+Se utiliza para establecer que a partir de cierto punto se convierta en fixed
+*/
+/* 
+Overflow: overflow tiene los ejes {y} y {x}
+overflow: auto; Detecta si en algun momento el contenido se sobre sale y pone un scroll automatico
+overflow: scroll; (sirve para poner un scrol dentro de un div, si es que el contenido se sobre sale del mismo)
+overflow: hidden; oculta la barra de deslizado
+*/
+/*
+Pseudo Elemento: Son elementos que no forman parte del dom pero si generan cambios visuales
+::first-line = Se encarga de modificar la primer linea que tenga el texto al cual estamos intentando manipular. No funciona en los elementos INLINE
+::first-letter = Se encarga de modificar la primer letra que tenga el texto al cual estamos intentando manipular. No funciona en los elementos INLINE
+::placeholder = Se encarga de editar el atributo placeholder de html
+::selection = Se encarga de modificar como se ve el texto y el resaltado del texto seleccionado
+::after
+::before
+*/
+
+/*
+Pseudo Clase: Funcionan como "escuchas" es decir, esperan acciones del usuario para funcionar.
+:hover = Al pasar el mouse por el elemento al cual le agreguemos esta pseudo clase, va a realizar una accion la cual nosotros indiquemos, por ejemplo podria cambiar el color de la letra, cambiar el color del fondo, etc
+:link = Cambia un link que todavia no se visito, por ejemplo si un usuario todavia no clickeo en el link que nosotros le pusimos para que visite podemos volverlo de un color especifico hasta que lo clickee.
+Tambien se puede cambiar mas propiedades como el fondo, el tamaño, etc
+:visited =  Cambia un link que ya se visito, por ejemplo si un usuario ya clickeo en el link que nosotros le pusimos para que visite podemos volverlo de un color especifico.
+Tambien se puede cambiar mas propiedades como el fondo, el tamaño, etc
+:active = Al sostener el click apretado encima del elemento al que le agreguemos esta pseudoclase, va a realizar una accion, por ejemplo podriamos poner que algo azul al mantener el click encima cambia a rojo.
+Tambien se le pueden modificar otras propiedades.
+:focus = Si un elemento tiene el atributo focus, podemos realizar cambios a este mismo cuando este "focuseado" por así decirlo. Se suele utilizar con los inputs. Tambien aplica para cuando un elemento esta seleccionado.
+:lang() = Se utiliza para modificar los elementos que contengan el atributo lang. Dentro del parentesis hay que pasarle un parametro el cual indique el idioma, {en} {es} etc. 
+<b lang="en"> Hello how are u</b>
+b:lang(en){
+    background: red
+}
+En este ejemplo todos los elementos que contengan el atributo lang "en" van a tener un fondo rojo
+*/
+/* 
+Transition: se encarga de manipular que tan rapido pasa x evento.
+transition-property: property/ies - all - none
+transition-duration: duracion/s
+transition-delay: delay/s
+transition-timing-function: linear | ease | ease-in | ease-out | step-start | step-end | steps(int,start,end)| initial | inherit
+*/
+
+/* 
+Object-fit:  Se suele utilizar más que nada con las imagenes.
+Fil
+Contain: Esta propiedad ajusta la imagen para que quepa en su totalidad (que se vea completa) dentro del contenedor que sea que estamos poniendola
+Cover: Ajusta la imagen para que cubra todo el tamaño del contendor
+None: Deja la imagen en su tamaño por defecto
+Scale-down: Opta entre {contain} {cover} y {none} quedandose con la que tenga el tamaño más chico
+*/
+
+/*
+Cursor: Permite cambiar el mouse. Hay muchas variables, googlearlas de querer modificar el cursor.
+(existe una que es croshair)
+*/
+
+/* 
+Responsive Design: Consiste básicamente en trabajar con distintas resoluciones para poder adaptar la pagina web a los distintos dispositivos
+Mobile First: Es un concepto el cual empieza primero por el diseño mobile y despues eso se adapta a tablet/escritorio. Google recomienda las paginas que utilizan este tipo de diseño, las posiciona mejor.
+Tambien se supone que es mejor que "desktop first" por temas de funcionamiento, buena practica, etc.
+Desde mi punto de vista es más "dificil" dejar las cosas hechas para celular, por ende si lo lograste hacer funcionar ahí, seguramente lo logres despues en las demas resoluciones mas grandes
+Desktop First: como lo dice su nombre, se arranca por una version desktop y despues se cambia para resoluciones menores
+Content first: en este caso se arma la pagina dependiendo del contenido que tenga.
+@media = Se usa para aplicar diferentes estilos para diferentes resoluciones. Nos ayuda a consultar y validar.
+ancho y alto de la ventana grafica
+ancho y alto del dispositivo
+orientacion (vertical o horizontal)
+resolucion
+Esto funciona como un "if" en programacion, es decir "si la resolucion es tal, poner este diseño"
+hay 4 tipos de @media: 
+all: 
+    apto para todos los dispositivos
+print:
+    destinado a material impreso  y visualizacion de documentos en una pantalla en el modo de vista previa de impresion
+screen
+    Destinado a pantallas, se utiliza para detectar que tipo de resolucion tiene la pantalla y de esa manera modificarse
+speech
+    Destinado a sintetizadores de voz
+operadores AND | OR: se utilizan para establecer condiciones para variar el comportamiento de la pagina
+orientacion: landscape y portrait
+Ejemplo de uso: 
+@media only screen and (max-width: 800px) {
+  div {
+    display: block;
+  }
+}
+# De esta manera decimos que cuando la pantalla alcance los 800pixeles o menos, el contenido va a tener el diseño el cual detallemos dentro de las llaves. En este ejemplo especifico, hariamos que los divs pasen a tener un display block para que se vean uno abajo del otro
+*/
+/*
+<a>: 
+text-decoration: none; (Esto es para remover la linea de abajo de los links)
+*/
+
+/*
+FlexBox:
+Requiere dos cosas para funcionar, un contenedor y dentro de él items. Se le da la propiedad flex al contenedor para afectar a los items. La flexbox tiene un eje {y} y un eje {x}
+flex-direction:  (sirve para cambiar la direccion que afecta el display flex, es decir cambiar los ejes de lugar)
+    - row: los items se van a poner uno al lado del otro en fila (viene por defecto)
+    - colum: hace que los items se pongan uno abajo del otro
+    - row-reverse: invierte el orden de los items, poniendo el primero al final y así sucesivamente
+    - colum-reverse: al igual que el row-reverse invierte el orden de los items pero en este caso de las columnas
+flex-wrap:
+    No-wrap: 
+    wrap: Sirve para que una vez llegado a un tamaño en el cual el contenido del item se empieza a deformar, pone un item abajo del otro en vez de deformar eltamaño    
+    wrap-reverse;
+flex-flow: Es para combinar las propiedades flex-direction y flex-wrap en una sola propiedad
+ejemplo:
+    flex-flow: colum wrap #De esta manera establecemos 
+align-items: se utiliza para modificar las posiciones dentro de las flexbox
+align-content: se utiliza para modificar las posiciones dentro de las flexbox cuando  hay más de una linea de items
+*/
+/*
+Justify content: Se utiliza para centrar el contenido dentro de una flexbox
+Center:
+Space-Arround: Centraliza todos los items del flexcontainer
+Space-between: Separa todos los items lo maximo posible
+space-evenly: Da un margin exactamente igual a todos los items dentro del contenedor
+*/
+/*
+Items properties:
+Flex Items: 
+Align-self: Sirve para alinear un item  especifico
+Flex-grow: Agarra el espacio sobrante y lo reparte entre los items que hayan
+flex-shrink: Decide cuando espacio va a ceder cada item
+flex-basis: es igual al width pero tiene más importancia
+order: 
+*/
+/*
+Grid: es un valor de display
+grid container
+grid item
+grid cell
+grid tracks(colum y row)
+grid area
+grid line (colum line y row line)
+--------propiedades--------
+GRID CONTAINER:
+grid-template-rows: Se utiliza para crear rows
+grid-template-colums: Se utiliza para crear cols
+grid-template-rows: repeat(3, 150px) #Si no queremos declarar cada row individualmente, podemos utilizar el valor repeat y dentro del parentesis pasar cuantas rows queremos que se creen y el tamaño que queremos que tengan
+fr - auto: se utilizan para modificar los tamaños automaticamente y que se amolden a la pantalla
+fr: Se utiliza para darle el tamaño restante de la pantalla a la row/colum que le otorguemos esa propiedad
+grid-row-gap: Es para establecer un margin entre las rows
+grid-colum-gap: Es para establecer un margin entre las cols
+grid-gap: row colum
+GRID ITEM
+----------------------------------------
+grid-row: Sirve para hacer una combinacion de colums, como cuando se unen dos celdas en excel. Esto equivale a usar las dos propiedades {grid-row-start} {grid-row-end} en una sola propiedad
+---------------------
+grid-colum: Sirve para hacer una combinacion de colums, como cuando se unen dos celdas en excel. Esto equivale a usar las dos propiedades {grid-colum-start} {grid-colum-end} en una sola propiedad. Tambien se puede utilizar el valor "span" que equivale a "expandirse" 
+Ejemplo:
+grid-colum: {grid-colum-start} 1/ {grid-colum-end} 3
+#De esta manera decimos que ocupe desde la primer linea hasta la tercera
+-----------------------------------
+:first-child #Se utiliza para seleccionar el primer item dentro de una grid
+-----------------------------------
+:nth-child() #Se utiliza para seleccionar el item que queramos modificar dentro de la grid pasando dentro del parentesis el numero del item que se quiere modificar.
+grid explicito y grid implicito: 
+    </p>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MongoDB</title>
+</head>
+<body>
+    <h1>MongoDB</h1>
+    <p>
+        en consola: <br>
+        1- mongod #Para iniciar la base de datos <br>
+        2 - mongo #Para poder ejecutar comandos, agregar o quitar datos, etc <br> <br> <br>
+        
+         
+        Base de datos: <br>
+        Mongodb trabaja con "colecciones" lo cual tiene adentro objetos de javascript (arrays o diccionarios en python). <br>
+        Convierte los archivos JSON a BSON. <br> <br>
+        
+        #Para pegar un texto copiado en mongodb se hace con el click derecho del mouse <br> <br>
+        
+        Comandos: <br>
+        db = Es para ver la base de datos actual que se esta utilizando (por defecto nos contecta a la base de datos test) <br>
+        show dbs = Muestra todas las base de datos que tengamos disponibles <br>
+        help = Muestra comandos que se pueden utilizar <br>
+        use (nombre de base de datos) = de esta manera se crea una nueva base de datos. Ejemplo: "use webstore" <br>
+        show collections = Sirve para mostrar las colecciones que contiene una base de datos <br>
+        db.dropDatabase() = Sirve para eliminar una base de datos <br>
+        db.createCollection("nombre") = Sirve para crear colecciones dentro de la db, se pasa el nombre como parametro entre comillas <br>
+        db.coleccion.insert({"name": "laptop"}) = De esta manera se insertan valores dentro de mongo db "db.nombre.insert({"nombre": "valor"}) <br>
+        db.coleccion.drop = sirve para eliminar una coleccion que queramos, reemplazando coleccion por el nombre de la coleccion a eliminar <br>
+        db.coleccion.find()= sirve para encontrar el contenido de la coleccion que le pasemos, podemos poner parametros dentro del parentesis para filtrar lo que queramos <br>
+        db.coleccion.find().pretty() = Sirve para lo mismo que el de arriba pero devuelve el contenido de una manera mas visible <br>
+        db.coleccion.findOne() = Sirve para buscar un solo dato, si hay varios datos con el mismo valor va a devolver solo el primero <br>
+        db.colection.find().limit(2) = Sirve para limitar el resultado que nos otorga el .find() <br>
+        db.colection.count() = Sirve para saber cuantos elementos hay dentro de la coleccion <br> 
+        db.colection.update({lo que se busca}, {lo que se agrega}) = Sirve para actualizar, lleva dos parametros necesarios, uno de busqueda y otro de actualizacion.  <br>
+        Quita todo el contenido previo y lo reemplaza por el segundo parametro otorgado <br>
+        db.colection.update({lo que se busca},{$set: {lo que se va a agregar}}) = para agregar un valor se utiliza la update y se le otorga dos parametros de nuevo. <br>
+        El primero de busqueda y en el segundo se agrega "$set" para que mongodb entienda que queremos agregar un valor seguido del valor que queremos agregar. <br>
+        db.colection.update({busqueda},{$set:{lo que se agrega}},{upsert:true}) = Esto sirve cuando queremos "actualizar" un dato y de no existir que se agregue. <br>
+        Para eso se agrega el "{upsert:true}" <br>
+        db.colection.update({busqueda}, {$inc: {valor a incrementar: cuanto se va a incrementar}}) = Sirve para incrementar valores numericos dentro de la db <br>
+        db.colection.update({busqueda},{$rename: {nombre de propiedad : nuevo nombre}} = Sirve para cambiarle el nombre a las "keys" dentro de los objetos <br>
+        db.colection.remove({busqueda}) = Elimina el objeto que le pasemos en el parametro de busqueda, si no le ponemos ningun parametro va a eliminar todo lo que haya  <br> <br> <br>
+        
+        
+        
+        db.products.findOne({"tags": "computers"}, {"name": 1, "description":1})</p>
+</body>
+</html>

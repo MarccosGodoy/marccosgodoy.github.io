@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript</h1>
+    <p>
+        /* 
+Variables: 
+var: Se utiliza para declarar un variables de una manera global
+let: Actualmente se utiliza let para declarar una variable "local" por así decirlo
+const: Son variables que no se puden modificar
+undefined: Es un error que indica que la variable existe en el programa pero no tiene un valor declarado.
+null: Se utiliza para declarar que una variable esta vacia
+    Ejemplo:
+        numero = null;
+nan: significa "not a number" es un error que se obtiene cuando no se puede realizar una operacion matemática
+Hoisting:
+Print:
+alert(): Genera un pop up en la pantalla con el contenido entre parentesis [una especie de print]
+document.write():  imprime dentro del navegador lo que sea que le pasemos entre parentesis
+console.log(): es para hacer print en la consola del navegador
+Input:
+promp(): Es un input que aparece en un pop up [similar al alert]
+Concatenacion: 
+    ${}:
+    let user = prompt('Como te llamas?')
+    alert(`Hola ${user} `)  # alt 96  para hacer las tildes estas. De igualmanera entre comillas parece funcionar pero no queda separado por colores el codigo y puede llevar a confusion
+Comparadores:
+=== : Este operador chekea si los dos datos que estamos comparando comparten tanto el contenido como el tipo de dato, es decir 23 y "23" son iguales, pero no son identicos. 23 y 23 si son identicos
+!== : No es identico
+&& = AND
+|| = or
+! = not #Devuelve lo contrario, es decir si ponemos !true devuelve false y viceversa
+Condicionales:
+if (true){
+    alert("hola")
+}
+else if (condicion){
+}
+else{
+}
+Convertir Datatype:
+parseInt: Convertir a int
+parseFloat: Convertir a Floar
+toString: Convertir a String
+Listas: Se declaran con []
+Diccionarios: Se declaran con {}
+Bucle While
+while(condicion){
+    codigo a ejecutar
+    break # Es util para finalizar el while, pero no es necesario
+}
+do{
+} #Se utiliza antes que el while, es decir primero se realiza el codigoque hay dentro del do ydespues ejecuta el while
+Bucle for:
+for (i = 0; i < 6; i++){
+}
+for(inicializacion; condicion; aumento o decremento)
+for in: Devuelve las posiciones del contenido
+    animales = ["perro", "gato", "pato"]
+    for (animal in animales){
+        document.write(animales)
+    }
+    resultado: 0 1 2
+for of: Funcionaa como el bucle for de python, devolviendo elcontenido de la lista
+    for (animal of animales){
+    document.write(animal + "<br>")
+    }
+    resultado: perro gato pato
+Funciones:
+function NOMBRE(){
+}
+Funcion flecha: En este caso no se declara la palabra function, en cambio se usa {=>}
+saludar () => {
+}
+Clases:
+class animal{
+    constructor(especie){
+        this.especie = especie
+    }
+}
+Metodos String:
+concat() - Junta dos cadenas 
+startsWith() 
+endsWith()
+includes()
+indexOf()
+lastIndexOf())
+padStart()
+padEnd()
+repeat()
+split() 
+substring()
+toLowerCase()
+toUpperCase()
+toString()
+trim() 
+trimEnd()
+trimStart()
+valueOf()
+Metodos Listas:
+pop() - Elimina el ultimo elemento y lo devuelve
+shift() - elimina el primer elemento de na lista y lo devuelve
+push() - agrega un elemento al final de la lista
+reverse() - invierte el orden de la lista
+unshift() - agrega uno o mas elementos al inicio y deuelve la nueva longitud
+sort() - ordena los elementos 
+splice() - Elimina el contenido de la lista reemplazandolo por nuevos
+forEach() - Ejecuta la funcion indicada una vez por cada elemento  
+Objeto Math:
+sqrt()
+cbrt()
+max()
+min()
+random() - Devuelve un numero random entre dos parametros que le pasemos
+round() - Redondea un numero y devuelve el valor
+fround() - Redondea un decimal
+floor()
+trunc()
+Consola: 
+clear()
+Document - Metodos de seleccion de elementos:
+- document.getElementById() - Seleccion por ID
+- document.getElementsByTagName() - Seleccion por nombre de etiqueta especifica
+- document.querySelector() - Se usa para seleccionar los elementos del a misma manera que seleccionariamos en CSS.
+- document.querySelectorAll() - Devuelve todos los elementos que conicidan con el selector especificado
+Metodos para definir, obtener y eliminar valores de atributos.
+- setAttribute() - Modifica el valor de un atributo
+Ejemplo: 
+{variable}.setAttribute("type", "text") [Toma dos parametros, el atributo y al tipo que lo queremos modificar, en este caso un input lo estariamos convirtiendo a texto]
+- getAttribute() - Obtiene el valor de un atributo
+{variable}.getAttribute({atributo})
+variable.getAttribute("type") [en el ejemplo arriba nos devolveria "text" por que es tipo texto]
+- removeAttribute() - Elimina el valor de un atributo
+Atributos globales:
+- class - Lista de clases del elemento separadas por espacios
+- contenteditable - indica si el elemento puede ser modificable por el usuario (bool)
+    ejemplo:
+    let title = document.querySelector(".titulo")
+    title.setAttribute("contentEditable", "true")
+    De esta manera le permitiriamos al usuario que edite el titulo que contenga la clase ".titulo", de poner false, hariamos que no sea editable por el usuario.
+- dir - indica la direccionalidad del texto
+    document.querySelector(".titulo") 
+    titulo.setAttribute("dir", "ltr") #Esto hace que el texto se lea de "Left to Rigth"
+    titulo.setAttribute("dir", "ltr") #Esto hace que el texto se lea de "Right to Left"
+- hidden - Se utiliza para ocultar o no un elemento
+    document.querySelector(".titulo")   
+    titulo.setAttribute("hidden", "true") # Ocultar elemento
+    titulo.setAttribute("hidden", "false") # Mostrar elemento
+- id - define un identificador unico
+- style - Contiene declaraciones de estilo CSS para ser aplicadas al elemento
+- tabindex - Seleccionar con tecla tab
+    titulo.setAttribute("tabindex", "0") # Esto sirve para seleccionar un elemento y el numero cero es el orden de seleccion, es decir cuando tocamos la tecla tab, este seria el primer elemento en seleccionarse y así podriamos ir poniendo numeros para que se selecciones otros elementos en orden
+- title - al pasar el mouse por encima del elemento va a devolvernos informacion al respecto la cual nosotros hayamos pasado
+    titulo.setAttribute("title", "informacion")
+Atributos de Inputs:
+- className - Devuelve el nombre de la clase
+- value - devuelve el value
+- type - sirve para modificar el type
+    input.type = "range" #De esta manera convertiriamos el input en range
+- accept: Sirve para indicar que tipo de archivo queremos que acepte (Util para los input tipo file)
+    input.accept = image/png
+- form
+- minLength: Establece el minimo de caracteres que tiene que tener x cosa (por ejemplo una contraseña o nombre de usuario)
+- placeholder
+- required
+- style
+Clases, classList y metodos de classList: Esto esta destinado a las clases de HTML
+- add() - Añade una clase
+- remove() - Quita una clase
+- item() - devuelve la clase del indice especificado
+- contains() - verifica si ese elemento posee o no, la clase especificada
+- replace() - reemplaza una clase por otra
+- toggle() - Si no tiene la clase especificada, la agrega y si ya la tiene, la elimina
+Obtencion y Modificacion de Elementos:
+- textContent 
+- innerText
+- outerText
+- innerHTML - Sirve para agregar contenido de texto dentro de los elementos
+    item.innetHTML = "Este texto estaria dentro del item y se veria en el navegador"
+- outerHTML
+Creacion de Elementos:
+- createElements() - Se utiliza para crear elementos html, es keysensitive, por ende hay que pasar todo en mayusculas
+    const item = document.createElement("LI")
+- createTextNode() - Se utiliza para crear el texto dentro del elemento
+    const textoLI = document.createTextNode("Item de lista")
+- appendChild() - Se utiliza para poner elementos dentro de otros, por ejemplo un h1 dentro de un header
+    item.appendChild(textoLI)
+- createDocumentFragment()
+    const contenedor = document.querySelector(".contenedor")
+    const item = document.createElement("LI")
+    const fragmento = document.createDocumentFragment()
+    item.innerHTML = "Este es un item de lista"
+    fragmento.appendChild(item)
+    contenedor.appendChild(fragmento)
+Obtencion y modificacion de childs:
+- firstChild
+- lastChild
+- firstElementChild
+- lastElementChild
+- childNodes
+- children
+    </p>
+</body>
+</html>
