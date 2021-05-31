@@ -1,0 +1,6 @@
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+Si o si tiene que ir en una funcion asyncrona
+uso = await sleep(milisegundos)
